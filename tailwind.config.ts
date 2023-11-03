@@ -6,8 +6,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ["poppins", ...fontFamily.sans],
       },
+      colors:{
+        "secondary":"#1e293b",
+        "primary": "#111827",
+        "tertiary": "#0f172a" 
+      }
     },
   },
   plugins: [],
