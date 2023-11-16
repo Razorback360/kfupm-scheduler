@@ -10,6 +10,7 @@ import React,{ useEffect }from "react";
 import { Tooltip } from "react-tooltip";
 import usePersistState from "@/utils/usePersistState";
 import { flushSync } from "react-dom";
+import Script from "next/script";
 
 export default function Home() {
   const terms = api.post.getTerms.useQuery();
@@ -192,6 +193,7 @@ export default function Home() {
         <meta name="description" content="Plan for your upcoming term at KFUPM using KFUPM Scheduler!" />
         <link rel="icon" href="/icon.png" />
       </Head>
+      <Script src="/tracking.js"></Script>
       <div className="flex flex-row items-center w-20 h-auto m-2">
       <img src="/icon.png" className=""></img>
       <p>KFUPM Scheduler</p>
@@ -220,7 +222,7 @@ export default function Home() {
           />
           
         </div>
-        <div className="flex-col flex w-3/4 flex-wrap p-3 m-5 bg-secondary rounded-xl">
+        <div className="flex-col flex w-3/4 flex-wrap p-3 m-5 bg-secondary rounded-xl mb-20">
           <div className="flex flex-row justify-evenly font-semibold">
             <Select placeholder="Select Semester"  options={termSelect} onChange={(e) => {
               if (e.value) {
