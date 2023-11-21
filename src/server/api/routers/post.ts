@@ -65,7 +65,7 @@ export const postRouter = createTRPCRouter({
    
       // req = await fetchCookie("https://banner9-registration.kfupm.edu.sa/StudentRegistrationSsb/ssb/classSearch/classSearch")
       // req = await fetchCookie(`https://banner9-registration.kfupm.edu.sa/StudentRegistrationSsb/ssb/classSearch/get_subject?searchTerm=&term=${input.term}&offset=1&max=10`)
-      req = await fetchCookie(`https://banner9-registration.kfupm.edu.sa/StudentRegistrationSsb/ssb/searchResults/searchResults?txt_subject=${input.subject}&txt_term=${input.term}&txt_campus=${input.gender}&startDatepicker=&endDatepicker=&pageOffset=0&pageMaxSize=100&sortColumn=subjectDescription&sortDirection=asc`, {
+      req = await fetchCookie(`https://banner9-registration.kfupm.edu.sa/StudentRegistrationSsb/ssb/searchResults/searchResults?txt_subject=${input.subject}&txt_term=${input.term}&txt_campus=${input.gender}&startDatepicker=&endDatepicker=&pageOffset=0&pageMaxSize=1000&sortColumn=subjectDescription&sortDirection=asc`, {
         cache: "force-cache",
         headers:{
           "Cache-Control": "max-age=120"
